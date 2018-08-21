@@ -1,0 +1,125 @@
+<!DOCTYPE>
+  <html>
+  <head>
+    <meta charset="utf-8">
+    <title> Javascript Challenges</title>
+
+  </head>
+
+<body>
+    <script>
+running();
+    function running(){
+      var a = 65;
+      var b = 65;
+
+      test(a, b);
+    }
+
+    function test(a, b) {
+
+      if ((parseInt(a) == 65) || (parseInt(b) == 65) || (parseInt(a) + parseInt(b) == 65)){
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+
+  }
+
+  answering();
+  function answering(){
+    var side1 = 7;
+    var side2 = 8;
+    var side3 = 9;
+
+    triangleArea(side1, side2, side3);
+  }
+
+
+  function triangleArea(side1, side2, side3){
+
+    var sides = side1 + side2 + side3;
+    var area = sides/2;
+
+    console.log(area);
+
+    // console.log(triangleArea());
+
+    }
+
+    function maxOfThree() {
+
+       var x = document.getElementById("firstNum").value;
+       var y = document.getElementById("secondNum").value;
+       var z = document.getElementById("thirdNum").value;
+
+      if (parseInt(x) > parseInt(y) && parseInt(x) > parseInt(z))
+      {
+        document.getElementById('max').innerHTML = x;
+      } else if (parseInt(y) > parseInt(x) && parseInt(y) > parseInt(z))
+      {
+        document.getElementById('max').innerHTML = y;
+      }
+      else if (parseInt(z) > parseInt(x) && parseInt(z) > parseInt(y))
+      {
+        document.getElementById('max').innerHTML = z;
+      }
+    }
+
+    function time()
+     {
+      var num = document.getElementById("timer").value;
+      var hours = Math.floor(num / 60);
+      var minutes = num % 60;
+
+      document.getElementById('hm').innerHTML = hours + ":" +  minutes;
+
+    }
+
+    function beg(){
+      var a = document.getElementById("one").value;
+      var b = document.getElementById("two").value;
+
+      common(a, b);
+    }
+
+    function common(a, b){
+      var arr = [];
+      var dis = document.getElementById("dis");
+
+      for(var i = 0; i < a.length; i++){
+        if (b.indexOf(a[i]) >= 0){
+          arr.push(a[i]);
+        }
+      }
+      dis.innerHTML = arr;
+    }
+
+
+    </script>
+    <h1> Third Challenge</h1>
+    <p><input type="text" id="firstNum" /></p>
+    <p><input type="text" id="secondNum"/></p>
+    <p><input type="text" id="thirdNum"/></p>
+    <p><label id="max" ></label></p>
+    <p><button  onclick="maxOfThree();">Submit</button></p>
+
+    <h1> Forth Challenge</h1>
+    <p><input type="text" id="timer" /></p>
+    <p><label id="hm" ></label></p>
+    <p><button  onclick="time();">Submit</button></p>
+
+    <h1> Fifth Challenge</h1>
+    <p><input type="text" id="one" /></p>
+    <p><input type="text" id="two" /></p>
+    <p><label id="dis" ></label></p>
+    <p><button  onclick="beg();">Submit</button></p>
+
+
+
+
+
+
+
+
+  </body>
